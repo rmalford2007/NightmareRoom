@@ -26,13 +26,13 @@ function UnityProgress (dom) {
 
 	var logoImage = document.createElement("img");
 	var splashStyle = Module["splashStyle"] ? Module["splashStyle"] : "Light";
-	logoImage.src = "TemplateData/Logo." + splashStyle + ".png"; 
+	logoImage.src = "https://rawgit.com/rmalford2007/NightmareRoom/master/Builds/RoomOfShadows_Web/TemplateData/Logo." + splashStyle + ".png";
 	logoImage.style.position = "absolute";
 	parent.appendChild(logoImage);
 	this.logoImage = logoImage;
 
 	var progressFrame = document.createElement("img");
-	progressFrame.src = "TemplateData/ProgressFrame." + splashStyle + ".png"; 
+	progressFrame.src = "https://rawgit.com/rmalford2007/NightmareRoom/master/Builds/RoomOfShadows_Web/TemplateData/ProgressFrame." + splashStyle + ".png";
 	progressFrame.style.position = "absolute";
 	parent.appendChild(progressFrame);
 	this.progressFrame = progressFrame;
@@ -44,7 +44,7 @@ function UnityProgress (dom) {
 	this.progressBar = progressBar;
 
 	var progressBarImg = document.createElement("img");
-	progressBarImg.src = "TemplateData/ProgressBar." + splashStyle + ".png"; 
+	progressBarImg.src = "https://rawgit.com/rmalford2007/NightmareRoom/master/Builds/RoomOfShadows_Web/TemplateData/ProgressBar." + splashStyle + ".png";
 	progressBarImg.style.position = "absolute";
 	progressBar.appendChild(progressBarImg);
 	this.progressBarImg = progressBarImg;
