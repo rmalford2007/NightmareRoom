@@ -2,6 +2,14 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+/*********************************************
+ * GameManager is used as a static singleton class that contains rules
+ *  for respawning, restarting, game over conditions, win conditions, score multipliers,
+ *  and UI functionality to show / hide game over and pause screens. 
+ *  
+ *  I like to throw stuff in here that doesn't belong to any one object, or if I want to access 
+ *  it more easily no matter what class I'm in.
+ * ******************************************/
 public delegate void GameMasterEvents(object value);
 
 public class GameManager : MonoBehaviour
@@ -138,7 +146,6 @@ public class GameManager : MonoBehaviour
         {
             managerStats.goal.max = innerWallCount + enemyCount;
             managerStats.SetGoal(managerStats.goal.max - destroyedWalls);
-            //managerStats.SetResource(enemyCount);
         }
         yield return null;
         CheckWin(managerStats);
@@ -176,7 +183,6 @@ public class GameManager : MonoBehaviour
         else
             theManager = this;
         Cursor.lockState = CursorLockMode.Confined;
-        //DontDestroyOnLoad(this);
     }
 
     public float GetCurrentChainMultiplier()

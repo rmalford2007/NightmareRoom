@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     public Stats playerStats;
     public bool playerDead = false;
     bool isPaused = false;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour {
         
     }
 
+    //Player is hitting pause button, stop input, call the game manager to set time to 0 
     void DoPause()
     {
         if(!isPaused)
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    //Get keyboard movement direction, so fixed update knows where we are moving
     void DoKeyboardMove()
     {
         
@@ -92,6 +95,7 @@ public class PlayerController : MonoBehaviour {
             anim.SetBool("isWalking", false);
     }
 
+    //Getting hit by something, take damage, the stat class will handle notifying objects watching it
     public void TakeDamage(float damageAmount)
     {
         if(playerStats != null && !playerDead)
@@ -138,6 +142,7 @@ public class PlayerController : MonoBehaviour {
         GameManager.theManager.GameOver();
     }
 
+    //Always face the character towards the mouse
     void DoMouseLook()
     {
         Vector3 mousePos = Input.mousePosition;
@@ -147,6 +152,7 @@ public class PlayerController : MonoBehaviour {
         transform.LookAt(mousePos);
     }
 
+    //User wants to attack, check to see if attacking is available, then start the routien to attack after starting the animation
     void DoAttack()
     {
         isAttacking = Input.GetMouseButton(0);
@@ -168,6 +174,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    //When the user clicks to attack, do a raycast for a hit target after a short delay when the weapon would most likely hit a target (we aren't using a collider on the weapon)
     IEnumerator DoDelayedAttack()
     {
         yield return new WaitForSeconds(.25f);
@@ -208,6 +215,7 @@ public class PlayerController : MonoBehaviour {
         yield return null;
     }
     
+    //Attacking is on cooldown, wait and reset it
     IEnumerator ResetAttack()
     {
         float waitTime = 1.0f / attackSpeed;
@@ -217,6 +225,7 @@ public class PlayerController : MonoBehaviour {
         yield return null;
     }
 
+    //Set the velocity / direction in fixed update since we are using a rigidbody with physics
     void FixedUpdate()
     {
         if (moveDirection != Vector3.zero)
