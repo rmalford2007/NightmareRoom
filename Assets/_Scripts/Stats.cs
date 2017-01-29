@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/****************************************
+ * Throughout many of my projects I end up using some sort of 
+ * stat class to track linear items like health, armor, lives, 
+ * score, and more.I expose event delegate functions to allow 
+ * other objects to subscribe and "watch" them for changes.
+ * *************************************/
 [System.Serializable]
 public class Stat
 {
@@ -24,11 +30,12 @@ public class Stats : MonoBehaviour {
     public Stat health;
     public Stat resources;
     public Stat goal;
-    //public Stat armor;
+
     public event StatInteractionHandler StatChanged_Health;
     public event StatInteractionHandler StatChanged_Resource;
     public event StatInteractionHandler StatChanged_Goal;
 
+    //Event for health stat changing, notify subscribers
     public virtual void OnStatChanged_Health(Stat s)
     {
         if (StatChanged_Health != null)
@@ -37,6 +44,7 @@ public class Stats : MonoBehaviour {
         }
     }
 
+    //Event for resource stat changing, notify subscribers
     public virtual void OnStatChanged_Resource(Stat s)
     {
         if (StatChanged_Resource != null)
@@ -45,6 +53,7 @@ public class Stats : MonoBehaviour {
         }
     }
 
+    //Event for goal stat changing, notify subscribers
     public virtual void OnStatChanged_Goal(Stat s)
     {
         if (StatChanged_Goal != null)

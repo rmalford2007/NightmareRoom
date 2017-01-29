@@ -2,6 +2,12 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/****************************************
+ * This is a UI helper class. Used with the Stats class. We can subscribe to a stat and watch it for changes.
+ *  Each time it changes we update the UI display in some special way. Whether it's updating text as health goes down,
+ *  or resizing a visual bar like a health bar.
+ * *************************************/
+
 public class TextUpdater : MonoBehaviour {
 
     private Text displayText;
@@ -11,15 +17,16 @@ public class TextUpdater : MonoBehaviour {
         RESOURCE,
         GOAL
     }
-    public StatTypeDisplay displayType = StatTypeDisplay.RESOURCE;
-    public GameObject trackObject;
-    public GameObject statResizeBar;
+    public StatTypeDisplay displayType = StatTypeDisplay.RESOURCE; //the type of stat we are tracking
+    public GameObject trackObject; //the game object that contains the stat component script to watch
+    public GameObject statResizeBar; //the game object that contains the image bar to resize 
     private Stats statObject;
 	// Use this for initialization
 	void Awake () {
         displayText = GetComponent<Text>();
 	}
 
+    //Susbscribe to stat object we are watching, based on type of stat we are watching
     void OnEnable()
     {
         if (trackObject == null)
@@ -47,6 +54,7 @@ public class TextUpdater : MonoBehaviour {
         }
     }
 
+    //Unsusbscribe from stat object we are watching
     void OnDisable()
     {
         if(statObject != null)
@@ -60,6 +68,7 @@ public class TextUpdater : MonoBehaviour {
         }
     }
 
+    //Setup the display based on the type of stat we are watching
     void SetStatDisplay(Stat s)
     {
         if (s != null)
@@ -91,6 +100,7 @@ public class TextUpdater : MonoBehaviour {
         }
     }
 
+    //Each time the watched stat is changed, call SetStatDisplay
     protected virtual void OnStatChanged(object sender, Stat s)
     {
         SetStatDisplay(s);
