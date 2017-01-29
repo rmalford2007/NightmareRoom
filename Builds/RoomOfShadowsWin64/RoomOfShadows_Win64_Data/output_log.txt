@@ -1,0 +1,52 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   NVIDIA
+    VRAM:     8145 MB
+    Driver:   21.21.13.7595
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.089 seconds
+Platform assembly: C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\PublicGitHub\NightmareRoom\Builds\RoomOfShadows_Win64_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 144Hz; virtual: 3600x1086 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 5.354020 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2aa8 -> priority: 1 
+  Thread -> id: 1c80 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.280457 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 481.
+Total: 0.430498 ms (FindLiveObjects: 0.026826 ms CreateObjectMapping: 0.012518 ms MarkObjects: 0.377612 ms  DeleteObjects: 0.013540 ms)
+
+Restarting scene: Level1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.178313 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 481.
+Total: 0.194171 ms (FindLiveObjects: 0.033469 ms CreateObjectMapping: 0.007153 ms MarkObjects: 0.148694 ms  DeleteObjects: 0.004598 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.719711 ms
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 371.
+Total: 0.189828 ms (FindLiveObjects: 0.017373 ms CreateObjectMapping: 0.006642 ms MarkObjects: 0.131576 ms  DeleteObjects: 0.033979 ms)
+
